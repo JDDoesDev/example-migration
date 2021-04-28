@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.companies.field_example_test_catch_phrase
+    - field.field.node.companies.field_example_test_string
+    - node.type.companies
+  module:
+    - user
+id: node.companies.teaser
+targetEntityType: node
+bundle: companies
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_example_test_catch_phrase: true
+  field_example_test_string: true

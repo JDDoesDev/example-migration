@@ -1,0 +1,11 @@
+name: New Relic Assessment Migration
+type: module
+description: A module for migrating content from a JSON endpoint into Drupal.
+package: Custom
+core: 8.x
+core_version_requirement: ^8 || ^9
+dependencies:
+  - drupal:migrate
+  - drupal:node
+  - migrate_plus:migrate_plus
+  - migrate_tools:migrate_tools

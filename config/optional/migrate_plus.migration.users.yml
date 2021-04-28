@@ -1,0 +1,86 @@
+id: users
+label: Example Users
+migration_group: example_users
+
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  urls: https://jsonplaceholder.typicode.com/users/
+  ids:
+    id:
+      type: integer
+  item_selector: /
+  fields:
+    -
+      name: id
+      label: 'ID'
+      selector: /id
+    -
+      name: name
+      label: 'Name'
+      selector: /name
+    -
+      name: username
+      label: 'Username'
+      selector: /username
+    -
+      name: email
+      label: 'Email'
+      selector: /email
+    -
+      name: street
+      label: 'Street'
+      selector: /address/street
+    -
+      name: suite
+      label: 'Suite'
+      selector: /address/suite
+    -
+      name: city
+      label: 'City'
+      selector: /address/city
+    -
+      name: zipcode
+      label: 'Zip'
+      selector: /address/zipcode
+    -
+      name: lat
+      label: 'Latitude'
+      selector: /address/geo/lat
+    -
+      name: lng
+      label: 'Longitude'
+      selector: /address/geo/lng
+    -
+      name: phone
+      label: 'Phone number'
+      selector: /phone
+    -
+      name: website
+      label: 'Website'
+      selector: /website
+process:
+  type:
+    plugin: default_value
+    default_value: user
+  title: name
+  field_example_test_username: username
+  field_example_test_email_address: email
+  field_example_test_street: street
+  field_example_test_suite: suite
+  field_example_test_city: city
+  field_example_test_zip: zipcode
+  field_example_test_lat: lat
+  field_example_test_lng: lng
+  field_example_test_phone: phone
+  field_example_test_website: username
+  sticky:
+    plugin: default_value
+    default_value: 0
+  uid:
+    plugin: default_value
+    default_value: 1
+destination:
+  plugin: 'entity:node'
+migration_dependencies: {}

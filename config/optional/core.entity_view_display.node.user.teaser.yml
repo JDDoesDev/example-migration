@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.user.field_example_test_city
+    - field.field.node.user.field_example_test_email_address
+    - field.field.node.user.field_example_test_lat
+    - field.field.node.user.field_example_test_lng
+    - field.field.node.user.field_example_test_phone
+    - field.field.node.user.field_example_test_street
+    - field.field.node.user.field_example_test_suite
+    - field.field.node.user.field_example_test_username
+    - field.field.node.user.field_example_test_website
+    - field.field.node.user.field_example_test_zip
+    - node.type.user
+  module:
+    - user
+id: node.user.teaser
+targetEntityType: node
+bundle: user
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_example_test_city: true
+  field_example_test_email_address: true
+  field_example_test_lat: true
+  field_example_test_lng: true
+  field_example_test_phone: true
+  field_example_test_street: true
+  field_example_test_suite: true
+  field_example_test_username: true
+  field_example_test_website: true
+  field_example_test_zip: true

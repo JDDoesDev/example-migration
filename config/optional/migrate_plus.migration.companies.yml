@@ -1,0 +1,46 @@
+id: companies
+label: New Relic Companies
+migration_group: example_users
+
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  urls: https://jsonplaceholder.typicode.com/users/
+  ids:
+    id:
+      type: integer
+  item_selector: /
+  fields:
+    -
+      name: id
+      label: 'ID'
+      selector: /id
+    -
+      name: company
+      label: 'Company Name'
+      selector: /company/name
+    -
+      name: catchPhrase
+      label: 'Catch Phrase'
+      selector: /company/catchPhrase
+    -
+      name: bs
+      label: 'String'
+      selector: /company/bs
+process:
+  type:
+    plugin: default_value
+    default_value: companies
+  title: company
+  field_example_test_catchphrase: catchPhrase
+  field_example_test_string: bs
+  sticky:
+    plugin: default_value
+    default_value: 0
+  uid:
+    plugin: default_value
+    default_value: 1
+destination:
+  plugin: 'entity:node'
+migration_dependencies: {}

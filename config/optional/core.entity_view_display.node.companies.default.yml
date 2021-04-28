@@ -1,0 +1,36 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.companies.field_example_test_catch_phrase
+    - field.field.node.companies.field_example_test_string
+    - node.type.companies
+  module:
+    - user
+id: node.companies.default
+targetEntityType: node
+bundle: companies
+mode: default
+content:
+  field_example_test_catch_phrase:
+    weight: 101
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_example_test_string:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,0 +1,7 @@
+nr_migration.example:
+  path: '/migrated-content'
+  defaults:
+    _title: 'Migrated Content'
+    _controller: '\Drupal\example_migration\Controller\MigratedContentController::build'
+  requirements:
+    _permission: 'access content'
