@@ -22,7 +22,7 @@ INSTALLATION INSTRUCTIONS
 3. Allow required dependencies to be installed as well.
 4. If using Migrate Tools, enable that module `drush en migrate_tools`.
 
-Installing the NR Migrations module will also install the User and Companies content types.
+Installing the Example Migrations module will also install the User and Companies content types.
 
 RUNNING MIGRATIONS
 ------------
